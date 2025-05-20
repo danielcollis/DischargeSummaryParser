@@ -1,0 +1,4 @@
+spacy
+scispacy
+uvicorn
+rasta-i
