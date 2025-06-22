@@ -5,18 +5,29 @@ function App() {
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  const [error, setError] = useState(null);
+
   async function handleSubmit(e) {
     e.preventDefault();
     setLoading(true);
     setResult(null);
-    const res = await fetch('/api/parse', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ summary }),
-    });
-    const data = await res.json();
-    setResult(data);
-    setLoading(false);
+    setError(null);
+  
+    try {
+      const res = await fetch('/api/parse', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ summary }),
+      });
+  
+      if (!res.ok) throw new Error((await res.json()).detail);
+      const data = await res.json();
+      setResult(data);
+    } catch (err) {
+      setError(err.message || "Something went wrong.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -42,6 +53,7 @@ function App() {
           <pre>{JSON.stringify(result, null, 2)}</pre>
         </div>
       )}
+      {error && <div style={{ color: "red" }}>{error}</div>}
     </div>
   );
 }
