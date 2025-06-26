@@ -51,6 +51,25 @@ function App() {
         <div style={{ marginTop: '1rem' }}>
           <h2>Parsed Results:</h2>
           <pre>{JSON.stringify(result, null, 2)}</pre>
+          <button onClick={() => {
+  navigator.clipboard.writeText(JSON.stringify(result, null, 2));
+}}>
+  Copy to Clipboard
+</button>
+
+<button onClick={() => {
+  const blob = new Blob([JSON.stringify(result, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = 'parsed_summary.json';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
+}}>
+  Download JSON
+</button>
         </div>
       )}
       {error && <div style={{ color: "red" }}>{error}</div>}
