@@ -1,0 +1,497 @@
+[
+  {
+    "id": "sample_01",
+    "text": "This 58-year-old male with a history of hypertension and pneumonia was admitted for further management. He was stabilized and discharged on furosemide.",
+    "expected": {
+      "diagnoses": [
+        {
+          "text": "hypertension",
+          "cui": "C0020538",
+          "umls_name": "Hypertensive disease"
+        },
+        {
+          "text": "pneumonia",
+          "cui": "C0032285",
+          "umls_name": "Pneumonia"
+        }
+      ],
+      "medications": [
+        {
+          "text": "furosemide",
+          "cui": "C0016360",
+          "umls_name": "furosemide"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sample_02",
+    "text": "Diagnosis confirmed as coronary artery disease and diabetes. Discharge meds: metformin. Recommend monitoring for any adverse reactions.",
+    "expected": {
+      "diagnoses": [
+        {
+          "text": "coronary artery disease",
+          "cui": "C1956346",
+          "umls_name": "Coronary Artery Disease"
+        },
+        {
+          "text": "diabetes",
+          "cui": "C0011847",
+          "umls_name": "Diabetes"
+        }
+      ],
+      "medications": [
+        {
+          "text": "metformin",
+          "cui": "C0025598",
+          "umls_name": "metformin"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sample_03",
+    "text": "Admitted for evaluation of hypertension and chronic kidney disease. After treatment with lisinopril and albuterol, patient discharged in improved condition.",
+    "expected": {
+      "diagnoses": [
+        {
+          "text": "hypertension",
+          "cui": "C0020538",
+          "umls_name": "Hypertensive disease"
+        },
+        {
+          "text": "chronic kidney disease",
+          "cui": "C1561643",
+          "umls_name": "Chronic Kidney Disease"
+        }
+      ],
+      "medications": [
+        {
+          "text": "lisinopril",
+          "cui": "C0077671",
+          "umls_name": "lisinopril"
+        },
+        {
+          "text": "albuterol",
+          "cui": "C0001923",
+          "umls_name": "albuterol"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sample_04",
+    "text": "Presented to the ER with complications related to diabetes. After stabilization, prescribed metformin and albuterol and discharged home in stable condition.",
+    "expected": {
+      "diagnoses": [
+        {
+          "text": "diabetes",
+          "cui": "C0011847",
+          "umls_name": "Diabetes"
+        }
+      ],
+      "medications": [
+        {
+          "text": "metformin",
+          "cui": "C0025598",
+          "umls_name": "metformin"
+        },
+        {
+          "text": "albuterol",
+          "cui": "C0001923",
+          "umls_name": "albuterol"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sample_05",
+    "text": "Following a routine check-up, the patient was diagnosed with chronic kidney disease and coronary artery disease and was started on lisinopril and albuterol. Discharge instructions were provided.",
+    "expected": {
+      "diagnoses": [
+        {
+          "text": "chronic kidney disease",
+          "cui": "C1561643",
+          "umls_name": "Chronic Kidney Disease"
+        },
+        {
+          "text": "coronary artery disease",
+          "cui": "C1956346",
+          "umls_name": "Coronary Artery Disease"
+        }
+      ],
+      "medications": [
+        {
+          "text": "lisinopril",
+          "cui": "C0077671",
+          "umls_name": "lisinopril"
+        },
+        {
+          "text": "albuterol",
+          "cui": "C0001923",
+          "umls_name": "albuterol"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sample_06",
+    "text": "Seen in clinic for follow-up; coronary artery disease and pneumonia was noted. Continued on metformin and albuterol as per previous treatment plan.",
+    "expected": {
+      "diagnoses": [
+        {
+          "text": "coronary artery disease",
+          "cui": "C1956346",
+          "umls_name": "Coronary Artery Disease"
+        },
+        {
+          "text": "pneumonia",
+          "cui": "C0032285",
+          "umls_name": "Pneumonia"
+        }
+      ],
+      "medications": [
+        {
+          "text": "metformin",
+          "cui": "C0025598",
+          "umls_name": "metformin"
+        },
+        {
+          "text": "albuterol",
+          "cui": "C0001923",
+          "umls_name": "albuterol"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sample_07",
+    "text": "Discharge summary: Patient managed for pneumonia and chronic kidney disease. Final medication list includes atorvastatin. Follow-up in two weeks advised.",
+    "expected": {
+      "diagnoses": [
+        {
+          "text": "pneumonia",
+          "cui": "C0032285",
+          "umls_name": "Pneumonia"
+        },
+        {
+          "text": "chronic kidney disease",
+          "cui": "C1561643",
+          "umls_name": "Chronic Kidney Disease"
+        }
+      ],
+      "medications": [
+        {
+          "text": "atorvastatin",
+          "cui": "C0717700",
+          "umls_name": "atorvastatin"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sample_08",
+    "text": "Discharge summary: Patient managed for coronary artery disease. Final medication list includes amlodipine and metformin. Follow-up in two weeks advised.",
+    "expected": {
+      "diagnoses": [
+        {
+          "text": "coronary artery disease",
+          "cui": "C1956346",
+          "umls_name": "Coronary Artery Disease"
+        }
+      ],
+      "medications": [
+        {
+          "text": "amlodipine",
+          "cui": "C0051696",
+          "umls_name": "amlodipine"
+        },
+        {
+          "text": "metformin",
+          "cui": "C0025598",
+          "umls_name": "metformin"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sample_09",
+    "text": "Seen in clinic for follow-up; pneumonia was noted. Continued on albuterol as per previous treatment plan.",
+    "expected": {
+      "diagnoses": [
+        {
+          "text": "pneumonia",
+          "cui": "C0032285",
+          "umls_name": "Pneumonia"
+        }
+      ],
+      "medications": [
+        {
+          "text": "albuterol",
+          "cui": "C0001923",
+          "umls_name": "albuterol"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sample_10",
+    "text": "A brief hospital stay due to hypertension. Responded well to treatment with atorvastatin and lisinopril. No complications noted on discharge.",
+    "expected": {
+      "diagnoses": [
+        {
+          "text": "hypertension",
+          "cui": "C0020538",
+          "umls_name": "Hypertensive disease"
+        }
+      ],
+      "medications": [
+        {
+          "text": "atorvastatin",
+          "cui": "C0717700",
+          "umls_name": "atorvastatin"
+        },
+        {
+          "text": "lisinopril",
+          "cui": "C0077671",
+          "umls_name": "lisinopril"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sample_11",
+    "text": "Case involved hypertension, treated with amlodipine. Stable upon discharge with clear outpatient care instructions.",
+    "expected": {
+      "diagnoses": [
+        {
+          "text": "hypertension",
+          "cui": "C0020538",
+          "umls_name": "Hypertensive disease"
+        }
+      ],
+      "medications": [
+        {
+          "text": "amlodipine",
+          "cui": "C0051696",
+          "umls_name": "amlodipine"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sample_12",
+    "text": "Admitted for evaluation of diabetes. After treatment with lisinopril, patient discharged in improved condition.",
+    "expected": {
+      "diagnoses": [
+        {
+          "text": "diabetes",
+          "cui": "C0011847",
+          "umls_name": "Diabetes"
+        }
+      ],
+      "medications": [
+        {
+          "text": "lisinopril",
+          "cui": "C0077671",
+          "umls_name": "lisinopril"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sample_13",
+    "text": "Presented with symptoms consistent with asthma and hypertension. Treated effectively using metformin, with no further issues reported.",
+    "expected": {
+      "diagnoses": [
+        {
+          "text": "asthma",
+          "cui": "C0004096",
+          "umls_name": "Asthma"
+        },
+        {
+          "text": "hypertension",
+          "cui": "C0020538",
+          "umls_name": "Hypertensive disease"
+        }
+      ],
+      "medications": [
+        {
+          "text": "metformin",
+          "cui": "C0025598",
+          "umls_name": "metformin"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sample_14",
+    "text": "Admitted for evaluation of chronic kidney disease and pneumonia. After treatment with atorvastatin and albuterol, patient discharged in improved condition.",
+    "expected": {
+      "diagnoses": [
+        {
+          "text": "chronic kidney disease",
+          "cui": "C1561643",
+          "umls_name": "Chronic Kidney Disease"
+        },
+        {
+          "text": "pneumonia",
+          "cui": "C0032285",
+          "umls_name": "Pneumonia"
+        }
+      ],
+      "medications": [
+        {
+          "text": "atorvastatin",
+          "cui": "C0717700",
+          "umls_name": "atorvastatin"
+        },
+        {
+          "text": "albuterol",
+          "cui": "C0001923",
+          "umls_name": "albuterol"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sample_15",
+    "text": "This 58-year-old male with a history of coronary artery disease was admitted for further management. He was stabilized and discharged on metformin.",
+    "expected": {
+      "diagnoses": [
+        {
+          "text": "coronary artery disease",
+          "cui": "C1956346",
+          "umls_name": "Coronary Artery Disease"
+        }
+      ],
+      "medications": [
+        {
+          "text": "metformin",
+          "cui": "C0025598",
+          "umls_name": "metformin"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sample_16",
+    "text": "This 58-year-old male with a history of asthma and coronary artery disease was admitted for further management. He was stabilized and discharged on furosemide.",
+    "expected": {
+      "diagnoses": [
+        {
+          "text": "asthma",
+          "cui": "C0004096",
+          "umls_name": "Asthma"
+        },
+        {
+          "text": "coronary artery disease",
+          "cui": "C1956346",
+          "umls_name": "Coronary Artery Disease"
+        }
+      ],
+      "medications": [
+        {
+          "text": "furosemide",
+          "cui": "C0016360",
+          "umls_name": "furosemide"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sample_17",
+    "text": "coronary artery disease noted during stay. Medications given: metformin and amlodipine. Will require outpatient follow-up to monitor recovery.",
+    "expected": {
+      "diagnoses": [
+        {
+          "text": "coronary artery disease",
+          "cui": "C1956346",
+          "umls_name": "Coronary Artery Disease"
+        }
+      ],
+      "medications": [
+        {
+          "text": "metformin",
+          "cui": "C0025598",
+          "umls_name": "metformin"
+        },
+        {
+          "text": "amlodipine",
+          "cui": "C0051696",
+          "umls_name": "amlodipine"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sample_18",
+    "text": "This 58-year-old male with a history of hypertension and coronary artery disease was admitted for further management. He was stabilized and discharged on lisinopril.",
+    "expected": {
+      "diagnoses": [
+        {
+          "text": "hypertension",
+          "cui": "C0020538",
+          "umls_name": "Hypertensive disease"
+        },
+        {
+          "text": "coronary artery disease",
+          "cui": "C1956346",
+          "umls_name": "Coronary Artery Disease"
+        }
+      ],
+      "medications": [
+        {
+          "text": "lisinopril",
+          "cui": "C0077671",
+          "umls_name": "lisinopril"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sample_19",
+    "text": "During admission, issues related to coronary artery disease were addressed. Sent home with prescriptions for atorvastatin.",
+    "expected": {
+      "diagnoses": [
+        {
+          "text": "coronary artery disease",
+          "cui": "C1956346",
+          "umls_name": "Coronary Artery Disease"
+        }
+      ],
+      "medications": [
+        {
+          "text": "atorvastatin",
+          "cui": "C0717700",
+          "umls_name": "atorvastatin"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sample_20",
+    "text": "pneumonia and coronary artery disease noted during stay. Medications given: amlodipine. Will require outpatient follow-up to monitor recovery.",
+    "expected": {
+      "diagnoses": [
+        {
+          "text": "pneumonia",
+          "cui": "C0032285",
+          "umls_name": "Pneumonia"
+        },
+        {
+          "text": "coronary artery disease",
+          "cui": "C1956346",
+          "umls_name": "Coronary Artery Disease"
+        }
+      ],
+      "medications": [
+        {
+          "text": "amlodipine",
+          "cui": "C0051696",
+          "umls_name": "amlodipine"
+        }
+      ]
+    }
+  }
+]
