@@ -2,10 +2,11 @@ import json
 import requests
 from collections import defaultdict
 from sklearn.metrics import precision_score, recall_score, f1_score
+import os
 
 # --- Configuration ---
 API_URL = "http://localhost:8000/parse"
-EVAL_FILE = "evaluation_set.json"
+EVAL_FILE = os.path.join(os.path.dirname(__file__), "evaluation_set.json")
 
 # --- Load Evaluation Data ---
 with open(EVAL_FILE, "r") as f:
