@@ -3,6 +3,7 @@ import requests
 from collections import defaultdict
 from sklearn.metrics import precision_score, recall_score, f1_score
 import os
+from sklearn.metrics import precision_recall_fscore_support
 
 # --- Configuration ---
 API_URL = "http://localhost:8000/parse"
@@ -36,12 +37,26 @@ for sample in eval_data:
     for category in ["diagnoses", "medications"]:
         expected_set = {normalize_entity(e) for e in expected.get(category, [])}
         predicted_set = {normalize_entity(e) for e in result.get(category, [])}
+        
+        # Tally true positives, false positives, false negatives
+        tp = len(predicted_set & expected_set)
+        fp = len(predicted_set - expected_set)
+        fn = len(expected_set - predicted_set)
 
-        # Record for metrics: one-hot entity match list
+        # Print per-sample metrics (optional)
         all_entities = list(expected_set.union(predicted_set))
-        for ent in all_entities:
-            y_true[category].append(int(ent in expected_set))
-            y_pred[category].append(int(ent in predicted_set))
+        y_true_vec = [int(ent in expected_set) for ent in all_entities]
+        y_pred_vec = [int(ent in predicted_set) for ent in all_entities]
+        p, r, f1, _ = precision_recall_fscore_support(y_true_vec, y_pred_vec, average='binary', zero_division=0)
+
+        print(f"{sample['id']} - {category.capitalize()}:")
+        print(f"  TP={tp}, FP={fp}, FN={fn}")
+        print(f"  Precision={p:.2f}, Recall={r:.2f}, F1={f1:.2f}")
+
+        # Aggregate for global scoring
+        y_true[category].extend(y_true_vec)
+        y_pred[category].extend(y_pred_vec)
+
 
 # --- Calculate & Print Scores ---
 for category in ["diagnoses", "medications"]:
