@@ -10,7 +10,7 @@ const appStyles = `
     min-height: 100vh;
   }
   .center-container {
-    height: 100vh;
+    height: 75vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -140,14 +140,14 @@ function App() {
         AI-Driven Discharge Summary Parser – Automating Medical<br />
         Entity Extraction and Standardization Using NLP
       </div>
-      <nav style={{ width: '100vw', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#23272f', padding: '0.75rem 0', marginBottom: '2.5rem', boxShadow: '0 2px 8px rgba(0,0,0,0.15)' }}>
+      <nav style={{ width: '100vw', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#23272f', padding: '0.75rem 0', marginBottom: '0.5rem', boxShadow: '0 2px 8px rgba(0,0,0,0.15)' }}>
         <a href="#" style={{ color: '#82cfff', textDecoration: 'none', margin: '0 1.5rem', fontWeight: 500, fontSize: '1.05rem' }}>Home</a>
         <a href="#" style={{ color: '#82cfff', textDecoration: 'none', margin: '0 1.5rem', fontWeight: 500, fontSize: '1.05rem' }}>Docs</a>
         <a href="#" style={{ color: '#82cfff', textDecoration: 'none', margin: '0 1.5rem', fontWeight: 500, fontSize: '1.05rem' }}>About</a>
         <a href="#" style={{ color: '#82cfff', textDecoration: 'none', margin: '0 1.5rem', fontWeight: 500, fontSize: '1.05rem' }}>Contact</a>
       </nav>
-      <div className="center-container">
-        <div className="card">
+      <div className="center-container" style={{ marginTop: 0 }}>
+        <div className="card" style={{ marginTop: 0 }}>
           <h1>Discharge Summary Parser</h1>
           <form onSubmit={handleSubmit}>
             <textarea
