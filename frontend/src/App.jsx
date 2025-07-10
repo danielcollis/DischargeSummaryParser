@@ -10,7 +10,6 @@ const appStyles = `
     min-height: 100vh;
   }
   .center-container {
-    height: 75vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -147,7 +146,7 @@ function App() {
         <a href="#" style={{ color: '#82cfff', textDecoration: 'none', margin: '0 1.5rem', fontWeight: 500, fontSize: '1.05rem' }}>Contact</a>
       </nav>
       <div className="center-container" style={{ marginTop: 0 }}>
-        <div className="card" style={{ marginTop: 0 }}>
+        <div className="card" style={{ marginTop: '2.5rem' }}>
           <h1>Discharge Summary Parser</h1>
           <form onSubmit={handleSubmit}>
             <textarea
