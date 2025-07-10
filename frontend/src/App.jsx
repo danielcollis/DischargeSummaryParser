@@ -134,53 +134,59 @@ function App() {
   }
 
   return (
-    <div className="center-container">
+    <>
       <style>{appStyles}</style>
-      <div className="card">
-        <h1>Discharge Summary Parser</h1>
-        <form onSubmit={handleSubmit}>
-          <textarea
-            rows="6"
-            value={summary}
-            onChange={e => setSummary(e.target.value)}
-            placeholder="Paste discharge summary here..."
-          />
-          <div className="button-row">
-            <button className="primary-btn" type="submit" disabled={loading}>
-              {loading ? 'Parsing...' : 'Parse'}
-            </button>
-          </div>
-        </form>
-
-        {result && (
-          <div style={{ marginTop: '1.5rem' }}>
-            <h2>Parsed Results:</h2>
-            <pre>{JSON.stringify(result, null, 2)}</pre>
+      <div style={{ color: '#b0b3b8', textAlign: 'center', fontSize: '1.35rem', fontWeight: 600, width: '100vw', marginBottom: '2.5rem', marginTop: '1.5rem', letterSpacing: 0.2 }}>
+        AI-Driven Discharge Summary Parser – Automating Medical<br />
+        Entity Extraction and Standardization Using NLP
+      </div>
+      <div className="center-container">
+        <div className="card">
+          <h1>Discharge Summary Parser</h1>
+          <form onSubmit={handleSubmit}>
+            <textarea
+              rows="6"
+              value={summary}
+              onChange={e => setSummary(e.target.value)}
+              placeholder="Paste discharge summary here..."
+            />
             <div className="button-row">
-              <button className="secondary-btn" onClick={() => {
-                navigator.clipboard.writeText(JSON.stringify(result, null, 2));
-              }}>
-                Copy to Clipboard
-              </button>
-              <button className="secondary-btn" onClick={() => {
-                const blob = new Blob([JSON.stringify(result, null, 2)], { type: 'application/json' });
-                const url = URL.createObjectURL(blob);
-                const link = document.createElement('a');
-                link.href = url;
-                link.download = 'parsed_summary.json';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                URL.revokeObjectURL(url);
-              }}>
-                Download JSON
+              <button className="primary-btn" type="submit" disabled={loading}>
+                {loading ? 'Parsing...' : 'Parse'}
               </button>
             </div>
-          </div>
-        )}
-        {error && <div className="error">{error}</div>}
+          </form>
+
+          {result && (
+            <div style={{ marginTop: '1.5rem' }}>
+              <h2>Parsed Results:</h2>
+              <pre>{JSON.stringify(result, null, 2)}</pre>
+              <div className="button-row">
+                <button className="secondary-btn" onClick={() => {
+                  navigator.clipboard.writeText(JSON.stringify(result, null, 2));
+                }}>
+                  Copy to Clipboard
+                </button>
+                <button className="secondary-btn" onClick={() => {
+                  const blob = new Blob([JSON.stringify(result, null, 2)], { type: 'application/json' });
+                  const url = URL.createObjectURL(blob);
+                  const link = document.createElement('a');
+                  link.href = url;
+                  link.download = 'parsed_summary.json';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                  URL.revokeObjectURL(url);
+                }}>
+                  Download JSON
+                </button>
+              </div>
+            </div>
+          )}
+          {error && <div className="error">{error}</div>}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
