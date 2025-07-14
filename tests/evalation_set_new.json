@@ -1,0 +1,172 @@
+[
+    {
+      "id": "sample_01",
+      "text": "DISCHARGE SUMMARY: This 58-year-old male presents with a past medical history significant for hypertension and recent hospitalization for community-acquired pneumonia. The patient was admitted to the medical ward for ongoing management of his respiratory symptoms and blood pressure optimization. During his hospital stay, chest X-ray confirmed bilateral lower lobe infiltrates consistent with pneumonia. Blood pressure remained elevated despite previous antihypertensive therapy. The patient responded well to antibiotic therapy and respiratory support. His oxygen saturation improved to 98% on room air by discharge. Given his history of fluid retention and current presentation, he was stabilized on furosemide 40mg daily for diuresis and blood pressure control. The patient was discharged home in stable condition with close follow-up arranged with his primary care physician within one week. Discharge instructions included medication compliance, activity as tolerated, and return precautions for worsening shortness of breath or chest pain.",
+      "expected": {
+        "diagnoses": [
+          {
+            "text": "hypertension",
+            "cui": "C0020538",
+            "umls_name": "Hypertensive disease"
+          },
+          {
+            "text": "pneumonia",
+            "cui": "C0032285",
+            "umls_name": "Pneumonia"
+          }
+        ],
+        "medications": [
+          {
+            "text": "furosemide",
+            "cui": "C0016860",
+            "umls_name": "furosemide"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sample_02",
+      "text": "HOSPITAL COURSE AND DISCHARGE SUMMARY: Patient is a 62-year-old gentleman with a significant cardiac history who presented to the emergency department with complaints of chest discomfort and dyspnea on exertion. Cardiac catheterization performed during this admission revealed significant three-vessel coronary artery disease with 70% stenosis of the left anterior descending artery. Additionally, laboratory studies confirmed poorly controlled diabetes mellitus with HbA1c of 9.2%. The patient's blood glucose levels were stabilized during hospitalization with insulin therapy. Cardiology consultation recommended optimal medical management prior to consideration of revascularization procedures. Patient education was provided regarding diabetic diet and glucose monitoring. The patient was discharged on metformin 500mg twice daily to improve glycemic control. Comprehensive discharge planning included cardiac rehabilitation referral, endocrinology follow-up within 2 weeks, and strict dietary modifications. Patient counseled extensively on medication adherence and advised to monitor for any adverse reactions including gastrointestinal upset or signs of lactic acidosis.",
+      "expected": {
+        "diagnoses": [
+          {
+            "text": "dyspnea",
+            "cui": "C0013404",
+            "umls_name": "Dyspnea"
+          },
+          {
+            "text": "coronary artery disease",
+            "cui": "C1956346",
+            "umls_name": "Coronary Artery Disease"
+          },
+          {
+            "text": "diabetes mellitus",
+            "cui": "C0011849",
+            "umls_name": "Diabetes Mellitus"
+          },
+          {
+            "text": "stenosis",
+            "cui": "C1261287",
+            "umls_name": "Stenosis"
+          }
+        ],
+        "medications": [
+          {
+            "text": "metformin",
+            "cui": "C0025598",
+            "umls_name": "metformin"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sample_03",
+      "text": "DISCHARGE SUMMARY: This 67-year-old female patient was admitted for comprehensive evaluation and management of recently diagnosed hypertension and progressively worsening chronic kidney disease. Her admission was prompted by elevated blood pressure readings (180/110 mmHg) and laboratory findings showing creatinine of 2.8 mg/dL with estimated GFR of 22 mL/min/1.73m². Renal ultrasound revealed bilateral cortical thinning consistent with chronic kidney disease. The patient also reported occasional wheezing and shortness of breath, particularly with exertion. Pulmonary function tests suggested mild reactive airway disease. During her hospital stay, blood pressure was gradually controlled with ACE inhibitor therapy. The patient was started on lisinopril 10mg daily for both hypertension management and renal protection. Additionally, albuterol metered-dose inhaler was prescribed for bronchodilation as needed for respiratory symptoms. Nephrology consultation was obtained and recommended regular monitoring of kidney function. Patient was discharged in improved condition with well-controlled blood pressure and resolution of respiratory symptoms. Follow-up appointments scheduled with nephrology and primary care within 2 weeks.",
+      "expected": {
+        "diagnoses": [
+          {
+            "text": "hypertension",
+            "cui": "C0020538",
+            "umls_name": "Hypertensive disease"
+          },
+          {
+            "text": "chronic kidney disease",
+            "cui": "C1561643",
+            "umls_name": "Chronic Kidney Disease"
+          },
+          {
+            "text": "shortness of breath",
+            "cui": "C0013404",
+            "umls_name": "Dyspnea"
+          },
+          {
+            "text": "reactive airway disease",
+            "cui": "C3714497",
+            "umls_name": "Reactive airway disease"
+          },
+          {
+            "text": "bronchodilation",
+            "cui": "C3537072",
+            "umls_name": "Bronchodilation"
+          }
+        ],
+        "medications": [
+          {
+            "text": "lisinopril",
+            "cui": "C0065374",
+            "umls_name": "lisinopril"
+          },
+          {
+            "text": "albuterol",
+            "cui": "C0001927",
+            "umls_name": "albuterol"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sample_04",
+      "text": "EMERGENCY DEPARTMENT COURSE AND DISCHARGE: A 55-year-old male with a past medical history of Type 2 diabetes mellitus presented to the emergency department with acute complications related to his diabetes including severe hyperglycemia (glucose 450 mg/dL) and mild dehydration. The patient reported several days of polyuria, polydipsia, and general malaise. Initial assessment revealed no signs of diabetic ketoacidosis, but blood glucose required immediate management. IV fluids and insulin therapy were initiated in the emergency department. The patient's glucose levels responded well to treatment and normalized within 6 hours. During stabilization, the patient also complained of mild shortness of breath and chest tightness, which resolved with bronchodilator therapy. Laboratory studies ruled out cardiac etiology. After achieving metabolic stability, the patient was prescribed metformin 1000mg twice daily for long-term glucose control and albuterol inhaler for symptomatic relief of respiratory symptoms. The patient was discharged home in stable condition with diabetes education reinforcement and instructions for close glucose monitoring. Follow-up arranged with endocrinology within one week and primary care within 3 days.",
+      "expected": {
+        "diagnoses": [
+          {
+            "text": "Type 2 diabetes mellitus",
+            "cui": "C0011849",
+            "umls_name": "Diabetes Mellitus"
+          },
+          {
+            "text": "diabetes",
+            "cui": "C0011847",
+            "umls_name": "Diabetes"
+          },
+          {
+            "text": "hyperglycemia",
+            "cui": "C0020456",
+            "umls_name": "Diabetes Mellitus"
+          },
+          {
+            "text": "dehydration",
+            "cui": "C0011175",
+            "umls_name": "Dehydration"
+          },
+          {
+            "text": "polyuria",
+            "cui": "C0032617",
+            "umls_name": "Polyuria"
+          },
+          {
+            "text": "polydipsia",
+            "cui": "C0085602",
+            "umls_name": "Polydipsia"
+          },
+          {
+            "text": "shortness of breath",
+            "cui": "C0013404",
+            "umls_name": "Dyspnea"
+          },
+          {
+            "text": "malaise",
+            "cui": "C0231218",
+            "umls_name": "Malaise"
+          },
+          {
+            "text": "chest tightness",
+            "cui": "C0232292",
+            "umls_name": "Chest tightness"
+          }
+        ],
+        "medications": [
+          {
+            "text": "metformin",
+            "cui": "C0025598",
+            "umls_name": "metformin"
+          },
+          {
+            "text": "albuterol",
+            "cui": "C0001927",
+            "umls_name": "albuterol"
+          }
+        ]
+      }
+    }
+]
