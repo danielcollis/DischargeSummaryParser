@@ -7,7 +7,7 @@ from sklearn.metrics import precision_recall_fscore_support
 
 # --- Configuration ---
 API_URL = "http://localhost:8000/parse"
-EVAL_FILE = os.path.join(os.path.dirname(__file__), "evaluation_set.json")
+EVAL_FILE = os.path.join(os.path.dirname(__file__), "evaluation_set_new.json")
 
 # --- Load Evaluation Data ---
 with open(EVAL_FILE, "r") as f:
