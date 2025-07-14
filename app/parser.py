@@ -28,6 +28,9 @@ def process_discharge_summary(text: str) -> dict:
         "diagnoses": [],
         "medications": []
     }
+    # Track seen entities by (cui, umls_name) for each type
+    seen_diagnoses = set()
+    seen_medications = set()
 
     for ent in doc.ents:
         # Extract top UMLS CUI if available
@@ -43,9 +46,14 @@ def process_discharge_summary(text: str) -> dict:
             "umls_name": name
         }
 
+        key = (cui, name)
         if ent.label_.upper() == "DISEASE":
-            results["diagnoses"].append(structured_entity)
+            if key not in seen_diagnoses:
+                results["diagnoses"].append(structured_entity)
+                seen_diagnoses.add(key)
         elif ent.label_.upper() == "CHEMICAL":
-            results["medications"].append(structured_entity)
+            if key not in seen_medications:
+                results["medications"].append(structured_entity)
+                seen_medications.add(key)
 
     return results
