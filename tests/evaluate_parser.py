@@ -19,7 +19,7 @@ y_pred = {"diagnoses": [], "medications": []}
 
 # --- Normalize helper ---
 def normalize_entity(ent):
-    return (ent["text"].lower(), ent.get("cui", "").lower())
+    return (ent["text"].lower(), (ent.get("cui") or "").lower())
 
 # --- Evaluate Each Sample ---
 for sample in eval_data:
