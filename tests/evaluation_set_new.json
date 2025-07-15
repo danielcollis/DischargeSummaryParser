@@ -10,12 +10,27 @@
             "umls_name": "Hypertensive disease"
           },
           {
-            "text": "pneumonia",
-            "cui": "C0032285",
-            "umls_name": "Pneumonia"
+            "text": "community-acquired pneumonia",
+            "cui": "C0694549",
+            "umls_name": "Community-Acquired Pneumonia"
+          },
+          {
+            "text": "shortness of breath",
+            "cui": "C0013404",
+            "umls_name": "Dyspnea"
+          },
+          {
+            "text": "chest pain",
+            "cui": "C0008031",
+            "umls_name": "Chest Pain"
           }
         ],
         "medications": [
+          {
+            "text": "oxygen",
+            "cui": "C0030054",
+            "umls_name": "oxygen"
+          },
           {
             "text": "furosemide",
             "cui": "C0016860",
@@ -40,14 +55,24 @@
             "umls_name": "Coronary Artery Disease"
           },
           {
+            "text": "stenosis",
+            "cui": "C1261287",
+            "umls_name": "Stenosis"
+          },
+          {
             "text": "diabetes mellitus",
             "cui": "C0011849",
             "umls_name": "Diabetes Mellitus"
           },
           {
-            "text": "stenosis",
-            "cui": "C1261287",
-            "umls_name": "Stenosis"
+            "text": "gastrointestinal upset",
+            "cui": "C2697368",
+            "umls_name": "Gastrointestinal irritation"
+          },
+          {
+            "text": "lactic acidosis",
+            "cui": "C0001125",
+            "umls_name": "Acidosis, Lactic"
           }
         ],
         "medications": [
@@ -75,6 +100,11 @@
             "umls_name": "Chronic Kidney Disease"
           },
           {
+            "text": "wheezing",
+            "cui": "C0043144",
+            "umls_name": "Wheezing"
+          },
+          {
             "text": "shortness of breath",
             "cui": "C0013404",
             "umls_name": "Dyspnea"
@@ -91,6 +121,11 @@
           }
         ],
         "medications": [
+          {
+            "text": "ACE inhibitor",
+            "cui": "C0003015",
+            "umls_name": "Angiotensin-Converting Enzyme Inhibitors"
+          },
           {
             "text": "lisinopril",
             "cui": "C0065374",
@@ -113,11 +148,6 @@
             "text": "Type 2 diabetes mellitus",
             "cui": "C0011849",
             "umls_name": "Diabetes Mellitus"
-          },
-          {
-            "text": "diabetes",
-            "cui": "C0011847",
-            "umls_name": "Diabetes"
           },
           {
             "text": "hyperglycemia",
@@ -165,6 +195,291 @@
             "text": "albuterol",
             "cui": "C0001927",
             "umls_name": "albuterol"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sample_05",
+      "text": "DISCHARGE SUMMARY: A 45-year-old female was admitted with severe abdominal pain and diagnosed with acute pancreatitis based on elevated lipase levels and CT findings. The patient was managed with IV fluids and supportive care. She was prescribed pantoprazole 40mg daily to prevent gastric irritation and discharged in stable condition with outpatient gastroenterology follow-up.",
+      "expected": {
+        "diagnoses": [
+          {
+            "text": "abdominal pain",
+            "cui": "C0000737",
+            "umls_name": "Abdominal Pain"
+          },
+          {
+            "text": "pancreatitis",
+            "cui": "C0030305",
+            "umls_name": "Pancreatitis"
+          }
+        ],
+        "medications": [
+          {
+            "text": "pantoprazole",
+            "cui": "C0081876",
+            "umls_name": "pantoprazole"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sample_06",
+      "text": "HOSPITAL COURSE: Patient, a 70-year-old male, presented with confusion and was found to have a urinary tract infection. He received ceftriaxone 1g IV daily for 5 days and showed marked improvement. He was discharged with instructions to complete the course with oral cefuroxime.",
+      "expected": {
+        "diagnoses": [
+          {
+            "text": "confusion",
+            "cui": "C0009676",
+            "umls_name": "Confusion"
+          },
+          {
+            "text": "urinary tract infection",
+            "cui": "C0042029",
+            "umls_name": "Urinary tract infectious disease"
+          }
+        ],
+        "medications": [
+          {
+            "text": "ceftriaxone",
+            "cui": "C0007561",
+            "umls_name": "ceftriaxone"
+          },
+          {
+            "text": "cefuroxime",
+            "cui": "C0007562",
+            "umls_name": "cefuroxime"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sample_07",
+      "text": "DISCHARGE NOTE: This 33-year-old female was admitted with a diagnosis of migraine with aura. She was treated effectively with sumatriptan and discharged with a prescription for topiramate 25mg nightly for prophylaxis.",
+      "expected": {
+        "diagnoses": [
+          {
+            "text": "migraine",
+            "cui": "C0149931",
+            "umls_name": "Migraine Disorders"
+          }
+        ],
+        "medications": [
+          {
+            "text": "sumatriptan",
+            "cui": "C0075632",
+            "umls_name": "sumatriptan"
+          },
+          {
+            "text": "topiramate",
+            "cui": "C0076829",
+            "umls_name": "topiramate"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sample_08",
+      "text": "EMERGENCY DEPARTMENT NOTE: A 59-year-old male with COPD exacerbation was treated with prednisone and nebulized ipratropium. After stabilization, the patient was discharged with home oxygen and medications.",
+      "expected": {
+        "diagnoses": [
+          {
+            "text": "COPD",
+            "cui": "C0024117",
+            "umls_name": "Chronic Obstructive Airway Disease"
+          }
+        ],
+        "medications": [
+          {
+            "text": "prednisone",
+            "cui": "C0032952",
+            "umls_name": "prednisone"
+          },
+          {
+            "text": "ipratropium",
+            "cui": "C0027235",
+            "umls_name": "ipratropium"
+          },
+          {
+            "text": "oxygen",
+            "cui": "C0030054",
+            "umls_name": "oxygen"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sample_09",
+      "text": "INPATIENT COURSE: A 50-year-old female admitted for management of systemic lupus erythematosus flare with joint pain and fatigue. She was treated with hydroxychloroquine and tapering steroids. Rheumatology follow-up arranged.",
+      "expected": {
+        "diagnoses": [
+          {
+            "text": "systemic lupus erythematosus",
+            "cui": "C0024141",
+            "umls_name": "Systemic lupus erythematosus"
+          },
+          {
+            "text": "fatigue",
+            "cui": "C0015672",
+            "umls_name": "Fatigue"
+          }
+        ],
+        "medications": [
+          {
+            "text": "hydroxychloroquine",
+            "cui": "C0020336",
+            "umls_name": "hydroxychloroquine"
+          },
+          {
+            "text": "steroids",
+            "cui": "C0038317",
+            "umls_name": "Steroids"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sample_10",
+      "text": "DISCHARGE INSTRUCTIONS: A 28-year-old male with Crohn's disease admitted with flare and treated with infliximab. He showed clinical improvement and was discharged on azathioprine for maintenance therapy.",
+      "expected": {
+        "diagnoses": [
+          {
+            "text": "Crohn's disease",
+            "cui": "C0010346",
+            "umls_name": "Crohn Disease"
+          },
+          {
+            "text": "flare",
+            "cui": "C1517205",
+            "umls_name": "Flare"
+          }
+        ],
+        "medications": [
+          {
+            "text": "infliximab",
+            "cui": "C0666743",
+            "umls_name": "infliximab"
+          },
+          {
+            "text": "azathioprine",
+            "cui": "C0004482",
+            "umls_name": "azathioprine"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sample_11",
+      "text": "CASE SUMMARY: A 66-year-old with Parkinson's disease experienced worsening tremors. Neurology initiated carbidopa-levodopa therapy with good response. Patient discharged with scheduled follow-up.",
+      "expected": {
+        "diagnoses": [
+          {
+            "text": "Parkinson's disease",
+            "cui": "C0030567",
+            "umls_name": "Parkinson Disease"
+          },
+          {
+            "text": "tremors",
+            "cui": "C0040822",
+            "umls_name": "Tremor"
+          }
+        ],
+        "medications": [
+          {
+            "text": "carbidopa-levodopa",
+            "cui": "C0353697",
+            "umls_name": "carbidopa / levodopa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sample_12",
+      "text": "HOSPITAL STAY: Patient admitted for acute myocardial infarction. Cardiac catheterization performed and patient started on aspirin and atorvastatin. Cardiac rehab referral made.",
+      "expected": {
+        "diagnoses": [
+          {
+            "text": "acute myocardial infarction",
+            "cui": "C0155626",
+            "umls_name": "Acute myocardial infarction"
+          }
+        ],
+        "medications": [
+          {
+            "text": "aspirin",
+            "cui": "C0004057",
+            "umls_name": "aspirin"
+          },
+          {
+            "text": "atorvastatin",
+            "cui": "C0286651",
+            "umls_name": "atorvastatin"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sample_13",
+      "text": "ADMISSION SUMMARY: Patient with schizophrenia experiencing psychotic symptoms. Restarted on risperidone 2mg daily and discharged to outpatient care.",
+      "expected": {
+        "diagnoses": [
+          {
+            "text": "schizophrenia",
+            "cui": "C0036341",
+            "umls_name": "Schizophrenia"
+          }
+        ],
+        "medications": [
+          {
+            "text": "risperidone",
+            "cui": "C073393",
+            "umls_name": "risperidone"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sample_14",
+      "text": "CLINICAL NOTE: A 36-year-old with severe allergic rhinitis disorder. Treated with loratadine daily and advised allergen avoidance.",
+      "expected": {
+        "diagnoses": [
+          {
+            "text": "allergic rhinitis disorder",
+            "cui": "C2607914",
+            "umls_name": "Allergic rhinitis (disorder)"
+          }
+        ],
+        "medications": [
+          {
+            "text": "loratadine",
+            "cui": "C0065180",
+            "umls_name": "loratadine"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sample_15",
+      "text": "DISCHARGE SUMMARY: Elderly male admitted for atrial fibrillation with rapid ventricular response. Managed with diltiazem and anticoagulated with apixaban.",
+      "expected": {
+        "diagnoses": [
+          {
+            "text": "atrial fibrillation",
+            "cui": "C0004238",
+            "umls_name": "Atrial Fibrillation"
+          }
+        ],
+        "medications": [
+          {
+            "text": "diltiazem",
+            "cui": "C0012373",
+            "umls_name": "diltiazem"
+          },
+          {
+            "text": "apixaban",
+            "cui": "C1831808",
+            "umls_name": "apixaban"
           }
         ]
       }
