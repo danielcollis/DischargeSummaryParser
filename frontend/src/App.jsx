@@ -140,9 +140,9 @@ function App() {
         Entity Extraction and Standardization Using NLP
       </div>
       <nav style={{ width: '100vw', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#23272f', padding: '0.75rem 0', marginBottom: '0.5rem', boxShadow: '0 2px 8px rgba(0,0,0,0.15)' }}>
-        <a href="https://spacy.io/" style={{ color: '#82cfff', textDecoration: 'none', margin: '0 1.5rem', fontWeight: 500, fontSize: '1.05rem' }}>spaCy</a>
-        <a href="https://allenai.github.io/scispacy/" style={{ color: '#82cfff', textDecoration: 'none', margin: '0 1.5rem', fontWeight: 500, fontSize: '1.05rem' }}>SciSpaCy</a>
-        <a href="https://github.com/danielcollis/senior-project" style={{ color: '#82cfff', textDecoration: 'none', margin: '0 1.5rem', fontWeight: 500, fontSize: '1.05rem' }}>GitHub</a>
+        <a href="https://spacy.io/" target="_blank" rel="noopener noreferrer" style={{ color: '#82cfff', textDecoration: 'none', margin: '0 1.5rem', fontWeight: 500, fontSize: '1.05rem' }}>spaCy</a>
+        <a href="https://allenai.github.io/scispacy/" target="_blank" rel="noopener noreferrer" style={{ color: '#82cfff', textDecoration: 'none', margin: '0 1.5rem', fontWeight: 500, fontSize: '1.05rem' }}>SciSpaCy</a>
+        <a href="https://github.com/danielcollis/senior-project" target="_blank" rel="noopener noreferrer" style={{ color: '#82cfff', textDecoration: 'none', margin: '0 1.5rem', fontWeight: 500, fontSize: '1.05rem' }}>GitHub</a>
       </nav>
       <div className="center-container" style={{ marginTop: 0 }}>
         <div className="card" style={{ marginTop: '2.5rem' }}>
