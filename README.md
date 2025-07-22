@@ -114,7 +114,7 @@ Tests include:
 
 This project is academically grounded. You can find the full research paper in the [`/docs`](docs) folder:
 
-👉 [ResearchPaper.pdf]("docs/ResearchPaper.pdf")
+👉 [ResearchPaper.pdf](docs/ResearchPaper.pdf)
 
 ---
 
